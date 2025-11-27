@@ -7,30 +7,30 @@ const Classes = () => {
     {
       id: 1,
       title: 'Batch 1',
-      badge: 'Ages 6-9',
+      badge: 'Ages 6 - 9',
       days: 'Thursday',
       time: '4:00 PM - 5:00 PM',
-      fee: '$20/month',
+      fee: '$50/month',
       focus: 'coordination, rhythm',
       featured: true,
     },
     {
       id: 2,
       title: 'Batch 2',
-      badge: 'Ages 4.5-8',
+      badge: 'Ages 4.5 - 8',
       days: 'Friday',
       time: '5:30 PM - 6:45 PM',
-      fee: '$20/month',
+      fee: '$50/month',
       focus: 'mid-intermediate',
       featured: false,
     },
     {
       id: 3,
       title: 'Batch 3',
-      badge: 'Ages 3-4.5',
+      badge: 'Ages 3 - 4.5',
       days: 'Saturday',
       time: '10:00 AM - 11:00 AM',
-      fee: '$20/month',
+      fee: '$50/month',
       focus: 'basic fundamentals, fun activities',
       featured: false,
     }
@@ -39,7 +39,7 @@ const Classes = () => {
   return (
     <section id="classes" className="classes-section">
       <div className="container">
-        <h2 className="section-title">{siteInfo.name} Classes & Timings</h2>
+        <h2 className="section-title">Classes & Timings</h2>
         <p className="section-subtitle">Choose the perfect batch for your schedule</p>
         
         <div className="classes-grid">
@@ -87,8 +87,7 @@ const Classes = () => {
 
         <div className="info-box">
           <p>
-            <strong>Note:</strong> All classes include a 15-minute warm-up and cool-down session. 
-            Special workshops and masterclasses are announced monthly.
+            <strong>Note:</strong> The timings mentioned above can be changed by the tutor in case of any unforeseen circumstances.
           </p>
         </div>
       </div>
