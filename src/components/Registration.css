@@ -1,0 +1,104 @@
+.registration-section {
+  padding: 6rem 2rem 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.registration-placeholder {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+}
+
+.placeholder-content h3 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.placeholder-content > p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.contact-item span {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.contact-item div {
+  flex: 1;
+}
+
+.contact-item strong {
+  display: block;
+  color: #667eea;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .registration-section {
+    padding: 4rem 1rem 3rem 1rem;
+  }
+
+  .registration-placeholder {
+    padding: 2rem 1.5rem;
+  }
+
+  .placeholder-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .placeholder-content > p {
+    font-size: 1rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}

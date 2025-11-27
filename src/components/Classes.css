@@ -1,0 +1,130 @@
+.classes-section {
+  padding: 6rem 2rem 4rem 2rem;
+  background: white;
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.class-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.class-card.featured {
+  border-color: #667eea;
+  /* border-width: 3px;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2); */
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #ea6666; */
+  border-color: #667eea;
+  border-width: 3px;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+}
+
+.class-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.class-header h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.class-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.class-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center; /* vertically center icon and text */
+}
+.detail-item .icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.detail-item div {
+  line-height: 1.4;
+  color: #555;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  background: #ffd700;
+  color: #333;
+  padding: 0.4rem 2.8rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  transform: rotate(45deg);
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-box {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-left: 4px solid #667eea;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.info-box p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .classes-section {
+    padding: 4rem 1rem 3rem 1rem;
+  }
+
+  .classes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .class-card {
+    padding: 1.5rem;
+  }
+
+  .class-header h3 {
+    font-size: 1.3rem;
+  }
+}

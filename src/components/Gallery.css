@@ -1,0 +1,143 @@
+.gallery-section {
+  padding: 6rem 2rem 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 4/3;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-overlay p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.subsection-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin: 3rem 0 2rem 0;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.video-item {
+  text-align: center;
+}
+
+.video-embed {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 16/9;
+}
+
+.video-embed:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+.video-title {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 4rem 1rem 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .gallery-grid,
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+}
