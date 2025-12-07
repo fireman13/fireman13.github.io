@@ -130,6 +130,15 @@
     padding: 0.5rem 1rem;
     justify-content: space-between;
   }
+  /* Keep right-group anchored to the right in mobile */
+  .right-group { justify-content: flex-end; width: 100%; }
+  /* Fix the hamburger/X at the top-right */
+  .hamburger { position: absolute; top: 8px; right: 12px; z-index: 1100; }
+  /* When menu is open, ensure nav fills and centers without shifting hamburger */
+  .menu-open .right-group { width: 100%; justify-content: flex-end; }
+  .menu-open .nav { width: 100%; align-items: center; }
+  /* Hide the logo while menu is open on mobile */
+  .menu-open .logo { display: none; }
   .logo h1 { font-size: 1.1rem; }
   .right-group { gap: 1rem; }
   .nav {
@@ -140,21 +149,30 @@
   }
   .nav-links,
   .social-icons { width:100%; }
+  /* Center inner sections when open */
+  .menu-open .nav-links,
+  .menu-open .social-icons { width: auto; margin: 0 auto; }
+  /* Add spacing so content won't sit under the fixed hamburger */
+  .menu-open .nav { padding-top: 44px; }
   .nav-links {
     justify-content:center;
-    gap: 0.4rem;
+    gap: 0.8rem;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    text-align: center;
     margin: 0;
     padding: 0.5rem 0 0 0;
     display: none;
   }
+  .nav-links li { width: 100%; display: flex; justify-content: center; }
+  .menu-open .nav-links li { width: auto; }
   .nav-links.open { display: flex; }
-  .nav-links li a { padding: 0.3rem 0.6rem; font-size: 0.8rem; }
-  .social-icons { gap: 0.6rem; display: none; }
+  .nav-links li a { padding: 0.6rem 1rem; font-size: 1.1rem; font-weight: 600; }
+  /* Icons row appears beneath the links when menu is open */
+  .social-icons { gap: 0.8rem; display: none; justify-content: center; }
   .nav.show .social-icons { display: flex; }
-  .social-icon { padding: 0.25rem; }
-  .social-icon svg { width:18px; height:18px; }
+  .social-icon { padding: 0.4rem; }
+  .social-icon svg { width:24px; height:24px; }
   .hamburger:hover { background: rgba(255,255,255,0.15); }
 }

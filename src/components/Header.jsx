@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header" role="banner">
+    <header className={`header ${open ? 'menu-open' : ''}`} role="banner">
       <div className="header-container">
         <div className="logo" onClick={() => scrollToSection('home')} style={{cursor:'pointer'}}>
           <h1>🪇 {siteInfo.name}</h1>
