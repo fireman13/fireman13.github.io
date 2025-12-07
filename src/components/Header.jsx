@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import siteInfo from '../config/siteInfo';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [animationDone, setAnimationDone] = useState(false);
+  const logoRef = useRef(null);
+
+  useEffect(() => {
+    const logoElement = logoRef.current;
+    if (logoElement) {
+      const handleAnimationEnd = () => {
+        setAnimationDone(true);
+      };
+      logoElement.addEventListener('animationend', handleAnimationEnd);
+      return () => {
+        logoElement.removeEventListener('animationend', handleAnimationEnd);
+      };
+    }
+  }, []);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -13,11 +28,13 @@ const Header = () => {
     }
   };
 
+  const logoClassName = animationDone ? 'animation-done' : 'animate-logo';
+
   return (
     <header className={`header ${open ? 'menu-open' : ''}`} role="banner">
       <div className="header-container">
         <div className="logo" onClick={() => scrollToSection('home')} style={{cursor:'pointer'}}>
-          <h1>🪇 {siteInfo.name}</h1>
+          <h1 ref={logoRef} className={logoClassName}>{siteInfo.logo}</h1>
         </div>
         <div className="right-group">
           <button

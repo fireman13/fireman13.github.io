@@ -1,5 +1,6 @@
 const siteInfo = {
   name: 'Sweet Steps Bollywood Dance Classes',
+  logo: 'Sweet Steps',
   phonePrimary: '+1 980-253-6445',
   phoneAlternate: '+1 980-253-5158',
   email: 'nikarikapateria@gmail.com',
