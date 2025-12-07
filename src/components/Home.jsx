@@ -9,12 +9,13 @@ const Home = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
+https://www.youtube.com/watch?v=cfOMbvXtmwU
   return (
     <section id="home" className="home-section">
       <div className="container">
         <div className="hero-content">
-          <h1 className="hero-title">Welcome to {siteInfo.name}</h1>
+          <h1 className="hero-title">Welcome to</h1>
+          <h1 className="hero-title site-name">{siteInfo.name}</h1>
           <h2 className="dancer-name">Led by Tutor - {siteInfo.dancerName}</h2>
           <p className="hero-subtitle">{siteInfo.about}</p>
           <div className="hero-features">
