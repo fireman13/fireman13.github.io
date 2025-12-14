@@ -9,7 +9,7 @@ const Home = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-https://www.youtube.com/watch?v=cfOMbvXtmwU
+
   return (
     <section id="home" className="home-section">
       <div className="container">
